@@ -1,0 +1,16 @@
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: whatsapp-notify
+        id: whatsapp-notify
+        env:
+          account_sid: ACeb1c5da77e40e019172a5f5242ea98d6
+          auth_token: e19082032f2e4dc9255662669c2dc1bd
+          to_whatsapp_no: +6285273864767
+          message: ANJING LAGI JALAN
+
+
+        uses: khaled-ibtikar/whatsapp-push-notify-action@master
